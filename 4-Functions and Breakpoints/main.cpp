@@ -163,16 +163,16 @@
 
 		//Problem 3
 
-		int clamp1(int a, int b, int c) {
+		int clamp1(int lower, int upper, int value) {
 			int result;
-			if (c < a) {
-				return a;
+			if (value < lower) {
+				return lower;
 			}
-			else if (c > b) {
-				return b;
+			else if (value > upper) {
+				return upper;
 			}
 			else {
-				return c;
+				return value;
 			}
 		}
 
@@ -180,12 +180,15 @@
 			int userinp = 0;
 			int userinp1 = 0;
 			int userinp2 = 0;
+			int output5 = 0;
 			std::cout << "input three whole numbers" << std::endl;
 			std::cin >> userinp;
 			std::cin >> userinp1;
 			std::cin >> userinp2;
 
-			std::cout << "Your clamped number is "<<  << std::endl;
+			output5 = clamp1(userinp, userinp1, userinp2);
+
+			std::cout << "Your clamped number is "<< output5 << std::endl;
 
 
 		}
