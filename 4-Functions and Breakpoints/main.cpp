@@ -38,8 +38,8 @@
 			float denominator = 0;
 			float decimal = 0;
 			std::cout << "please input a fraction, numerator then denominator" << std::endl;
-			std::cin >> numerator;
-			std::cin >> denominator;
+			//std::cin >> numerator;
+			//std::cin >> denominator;
 
 			decimal = numerator / denominator;
 
@@ -53,9 +53,9 @@
 			float temp2 = 0;
 			float temp3 = 0;
 			std::cout << "please input three positive numbers largest to smallest" << std::endl;
-			std::cin >> user1;
-			std::cin >> user2;
-			std::cin >> user3;
+			//std::cin >> user1;
+			//std::cin >> user2;
+			//std::cin >> user3;
 
 			temp1 = user1 - user2;
 			temp2 = user1 - user3;
@@ -83,8 +83,8 @@
 			int input1 = 0;
 			int input2 = 0;
 			std::cout << "input two whole numbers" << std::endl;
-			std::cin >> input1;
-			std::cin >> input2;
+			//std::cin >> input1;
+			//std::cin >> input2;
 
 			std::cout << input1 << "," << input2 << std::endl;
 		}
@@ -101,25 +101,25 @@
 			int input5 = 0;
 			int output2 = 0;
 			std::cout << "input three whole numbers" << std::endl;
-			std::cin >> input3;
-			std::cin >> input4;
-			std::cin >> input5;
+			//std::cin >> input3;
+			//std::cin >> input4;
+			//std::cin >> input5;
 
 			output2 = sum1(input3, input4, input5);
 
 			std::cout << "the sum of your numbers is " << output2 << std::endl;
 		}
 
-		/*int min1(int a, int b) {
-			int result=
-				if (a >= b) {
-					return 1;
+		int min1(int a, int b) {
+			int result;
+				if (a <= b) {
+					return a; 
 				}
 				else {
-					return 0;
+					return b;
 				}
 			return result;
-		}*/
+		}
 
 		void min() {
 			int number1 = 0;
@@ -134,6 +134,61 @@
 			std::cout << "the smaller number is " << output3 << std::endl;
 		}
 
+		int max1(int a, int b) {
+			int result;
+			if (a >= b) {
+				return a;
+			}
+			else {
+				return b;
+			}
+			return result;
+		}
+
+		//open Problem 1
+
+		void max() {
+			int number3 = 0;
+			int number4 = 0;
+			int output4 = 0;
+			std::cout << "intput two whole numbers" << std::endl;
+			std::cin >> number3;
+			std::cin >> number4;
+
+			output4 = max1(number3, number4);
+
+			std::cout << "the larger number is " << output4 << std::endl;
+		}
+
+
+		//Problem 3
+
+		int clamp1(int a, int b, int c) {
+			int result;
+			if (c < a) {
+				return a;
+			}
+			else if (c > b) {
+				return b;
+			}
+			else {
+				return c;
+			}
+		}
+
+		void clamp() {
+			int userinp = 0;
+			int userinp1 = 0;
+			int userinp2 = 0;
+			std::cout << "input three whole numbers" << std::endl;
+			std::cin >> userinp;
+			std::cin >> userinp1;
+			std::cin >> userinp2;
+
+			std::cout << "Your clamped number is "<<  << std::endl;
+
+
+		}
 		int main() {
 			helloFunctions();
 			squareConsole();
@@ -141,6 +196,9 @@
 			difference();
 			numberComma();
 			sum();
+			min();
+			max();
+			clamp();
 
 			/*int input = 0;
 			std::cout << "input a number to square: ";
