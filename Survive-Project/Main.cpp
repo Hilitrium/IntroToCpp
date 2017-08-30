@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include"survivePaths.h"
 #include"charictorStats.h"
+#include"textModifier.h"
 using namespace std;
 
 int main() {
@@ -14,7 +15,10 @@ int main() {
 	char name[50];
 	cout << "Please name your Primaris Marine." << endl;
 	cin.getline(name, 50);
-	system("pause");
+	int plStatsST = 0;
+	int plStatsAG = 0;
+	int plStatsWH = 0;
+	//system("pause");
 
 	//Charictor creator
 	while (true) {
@@ -29,6 +33,7 @@ int main() {
 			//cin.getline(name, 50);
 			//cout << name << endl;
 			//system("pause");
+			cout << "Greetings " << name << ", ";
 			cout << "you have 9 points to spend between your strength, weapon handling, and your agility. " << endl;
 			cout << "you will also be able to equip your chosen weapons which will effect your stats." << endl;
 			cout << "Set your strength." << endl;
@@ -46,7 +51,10 @@ int main() {
 			cout << player.AG;
 
 			if (sT + aG + wH == 9) {
-				cout << "it worked." << endl;
+				//cout << "it worked." << endl;
+				plStatsAG = aG;
+				plStatsST = sT;
+				plStatsWH = wH;
 				break;
 				//choiceOne;
 			}
@@ -57,6 +65,63 @@ int main() {
 			system("pause");
 		}
 	}
-	cout << "it worked " << name << endl;
+	//cout << "it worked " << name << endl;
+	//cout << "player agility " << plStatsAG << endl;
+	//cout << "player strength " << plStatsST << endl;
+	//cout << "player weapon handling " << plStatsWH << endl;
+	
+	//Player weapon choice
+	int playerInput1 = 0;
+	cout << "Now choose what weapons you will be bringing with you, the weapons you choose will " << endl;
+	cout << "affect your stats. You will choose your ranged weapon then your melee weapon." << endl;
+	cout << "The avalible ranged weapons are the Assault bolter, the Stalker bolter, and the " << endl;
+	cout << "Plasma exterminator." << endl;
+	cout << "The assault bolter will increase your strength while decrecresing your weapon handling." << endl;
+	cout << "The Stalker bolter will increase your weapon handling while decreasing your strength" << endl;
+	cout << "The plasma will only increase your strength, however it won't be as big of a boost." << endl;
+	cout << "Press '1' for the Assault bolter, Press '2' for the Stalker bolter, or press '3' for" << endl;
+	cout << "the Plasma exterminator." << endl;
+	//int rangedWeaponChoice(); {
+	while (playerInput1 != 1 && playerInput1 != 2 && playerInput1 != 3) {
+		cout << "Please only input the numbers specified for the weapons." << endl;
+		cin >> playerInput1;
+	}
+	if (playerInput1 == 1) {
+		plStatsST += 3;
+		plStatsWH -= 2;
+	}
+	else if (playerInput1 == 2) {
+		plStatsST -= 1;
+		plStatsWH += 3;
+	}
+	else if (playerInput1 == 3) {
+		plStatsST += 2;
+	}
+	cout << plStatsST << endl;
+	cout << plStatsAG << endl;
+	cout << plStatsWH << endl;
+		
+	int playerInput2 = 0;
+	cout << "The avalible melee weapons avalible are the Power fist, the Chain sword, and the " << endl;
+	cout << "Lightning claws." << endl;
+	cout << "The Power fist will increase your strength while decreasing your agility." << endl;
+	cout << "The Chain sword will slightly increase your strength while leaving your other stats alone." << endl;
+	cout << "The Lightning claws will increase your agility while decreasing your strength." << endl;
+	cout << "Press '1' for the Power fist, Press '2' for the Chain sword, or Press '3' for the Lightning claws." << endl;
+	while (playerInput2 != 1 && playerInput2 != 2 && playerInput2 != 3) {
+		cout << "Please only input the numbers specified for the weapons." << endl;
+		cin >> playerInput2;
+	}
+	if (playerInput2 == 1) {
+		plStatsST += 3;
+		plStatsAG -= 2;
+	}
+	else if (playerInput2 == 2) {
+		plStatsST += 1;
+	}
+	else if (playerInput2 == 3) {
+		plStatsAG += 3;
+		plStatsST -= 2;
+	}
 	system("pause");
 }

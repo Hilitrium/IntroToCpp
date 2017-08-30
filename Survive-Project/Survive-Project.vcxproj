@@ -24,6 +24,7 @@
   <ItemGroup>
     <ClInclude Include="charictorStats.h" />
     <ClInclude Include="survivePaths.h" />
+    <ClInclude Include="textModifier.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{08331EFE-3DBB-4063-B15F-67C97D3B6A0B}</ProjectGuid>
