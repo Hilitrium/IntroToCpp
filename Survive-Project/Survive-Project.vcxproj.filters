@@ -29,5 +29,14 @@
     <ClInclude Include="textModifier.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="stayWithLibrarian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="escapePods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="followLibrarian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

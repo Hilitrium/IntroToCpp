@@ -23,6 +23,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="charictorStats.h" />
+    <ClInclude Include="escapePods.h" />
+    <ClInclude Include="followLibrarian.h" />
+    <ClInclude Include="stayWithLibrarian.h" />
     <ClInclude Include="survivePaths.h" />
     <ClInclude Include="textModifier.h" />
   </ItemGroup>

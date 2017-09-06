@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include"survivePaths.h"
 #include"charictorStats.h"
-#include"textModifier.h"
+//#include"textModifier.h"
 using namespace std;
 
 int main() {
@@ -46,9 +46,9 @@ int main() {
 			cin >> player.AG;
 			aG = player.AG;
 			//cout << sT;
-			cout << player.ST;
-			cout << player.WH;
-			cout << player.AG;
+			//cout << player.ST;
+			//cout << player.WH;
+			//cout << player.AG;
 
 			if (sT + aG + wH == 9) {
 				//cout << "it worked." << endl;
@@ -97,9 +97,9 @@ int main() {
 	else if (playerInput1 == 3) {
 		plStatsST += 2;
 	}
-	cout << plStatsST << endl;
-	cout << plStatsAG << endl;
-	cout << plStatsWH << endl;
+	cout <<"your new Strength stat is "<< plStatsST << endl;
+	cout <<"your new Agility stat is "<< plStatsAG << endl;
+	cout <<"your new Weapon Handiling stat is "<< plStatsWH << endl;
 		
 	int playerInput2 = 0;
 	cout << "The avalible melee weapons avalible are the Power fist, the Chain sword, and the " << endl;
@@ -123,5 +123,13 @@ int main() {
 		plStatsAG += 3;
 		plStatsST -= 2;
 	}
+	cout << "your final Strength stat is " << plStatsST << endl;
+	cout << "your final Agility stat is " << plStatsAG << endl;
+	cout << "your final Weapon Handiling stat is " << plStatsWH << endl;
+	//cout << plStatsAG;
+	//cout << plStatsST;
+	//cout << plStatsWH;
 	system("pause");
+	system("cls");
+	chapter1();
 }
