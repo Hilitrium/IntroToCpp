@@ -4,6 +4,7 @@ using namespace std;
 
 void escapePods() {
 	int choice3 = 0;
+	system("cls");
 	cout << "You and the Librarian decide it would be a good idea to get to the " << endl;
 	cout << "escape pods and go back to your homeworld in order to prepare for " << endl;
 	cout << "the innevitable Necron assault. Soon after your pod ejects from the ship " << endl;

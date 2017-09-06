@@ -21,6 +21,7 @@ void stayWLibrarian() {
 	cout << "Soon after you and the librarian kill the entire bridge crew alarms begin to sound " << endl;
 	cout << "that indicate that the plasma engine has been comprimised. If it were to go critical " << endl;
 	cout << "it will kill everyone onboard and a majority of your fleet." << endl;
+	cout << endl;
 	cout << "If you want to go to the escape pods and go back down to your homeworld " << endl;
 	cout << "to prepare for a fight Press '1'. If you want to go to the engine room to " << endl;
 	cout << "try and prevent a critical meltdown Press '2'." << endl;
